@@ -4,22 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AstroScreen</title>
-    <link rel="stylesheet" href="./style/style1.css">
+    <link rel="stylesheet" href="./style/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        
+        <video autoplay muted loop playsinline class="bg-video">
+            <source src="/AstralScreen-0.2/sources/video-header.mp4" type="video/mp4">
+            Tu navegador no soporta video.
+        </video>
         <nav class="navegacion">
-
-            <img src="/sources/LogoAstroScreen.png" alt="Logo_AstroScreen" class="navegacion_logo">
+            
+            <img src="./sources/LogoAstroScreen.png" alt="Logo_AstroScreen" class="navegacion_logo">
             
             <ul type="none">
-                <li class="navegacion_somos"><a href="">Quienes somos</a></li>
-                <li class="navegacion_servicios"><a href="">Servicios</a></li>
-                <li class="navegacion_conta ctanos"><a href="">Contactanos</a></li>
+                <li class="navegacion_somos"><a href="#quienes-somos">Quienes somos</a></li>
+                <li class="navegacion_servicios"><a href="#contactanos">Contactanos</a></li>
+                <li class="navegacion_conta ctanos"><a href="#servicios">Servicios</a></li>
             </ul>
             
             <div class="inicio-sesion">
@@ -34,7 +37,9 @@
             </h1>
         </div>
     </header>
+    
     <main>
+
         <section class="peliculas">
             <div class="filtrar">
                 <span class="resultados">12807 resultados</span>
@@ -49,89 +54,139 @@
             <div class="cajas">
                 <div class="caja_pelicula pelicula-1">
                     <div>
+                        <p>Los croods</p>
+                        <span>10.0</span>
+                    </div>
+                    <img src="" alt="">
+                </div>
+                <div class="caja_pelicula pelicula-2">
+                    <div>
                         <p>Anaconda 3</p>
                         <span>10.0</span>
                     </div>
-                    <img src="" alt=""></div>
-                <div class="caja_pelicula pelicula-2"><img src="" alt=""></div>
-                <div class="caja_pelicula pelicula-3"><img src="" alt=""></div>
-                <div class="caja_pelicula pelicula-4"><img src="" alt=""></div>
-                <div class="caja_pelicula pelicula-5"><img src="" alt=""></div>
-                <div class="caja_pelicula pelicula-6"><img src="" alt=""></div>
-                <div class="caja_pelicula pelicula-7"><img src="" alt=""></div>
-                <div class="caja_pelicula pelicula-8"><img src="" alt=""></div>
-                <div class="caja_pelicula pelicula-9"><img src="" alt=""></div>
+                    <img src="" alt="">
+                </div>
+                <div class="caja_pelicula pelicula-3">
+                    <div>
+                        <p>Paddington</p>
+                        <span>10.0</span>
+                    </div>
+                    <img src="" alt="">
+                </div>
+                <div class="caja_pelicula pelicula-4">
+                    <div>
+                        <p>Paranorman</p>
+                        <span>10.0</span>
+                    </div>
+                    <img src="" alt="">
+                </div>
+                <div class="caja_pelicula pelicula-5">
+                    <div>
+                        <p>Pequeña Miss Sunshine</p>
+                        <span>10.0</span>
+                    </div>
+                    <img src="" alt="">
+                </div>
+                <div class="caja_pelicula pelicula-6">
+                    <div>
+                        <p>Soul</p>
+                        <span>10.0</span>
+                    </div>
+                    <img src="" alt="">
+                </div>
+                <div class="caja_pelicula pelicula-7">
+                    <div>
+                        <p>Eterno resplandor de una mente sin recuerdos</p>
+                        <span>10.0</span>
+                    </div>
+                    <img src="" alt="">
+                </div>
+                <div class="caja_pelicula pelicula-8">
+                    <div>
+                        <p>Encanto</p>
+                        <span>10.0</span>
+                    </div>
+                    <img src="" alt="">
+                </div>
+                <div class="caja_pelicula pelicula-9">
+                    <div>
+                        <p>Lady bird</p>
+                        <span>10.0</span>
+                    </div>
+                    <img src="" alt="">
+                </div>
+                <div class="caja-vermas">
+                    <span>Ver mas</span>
+                </div>
             </div>
 
 
         </section>
 
-        <section class="contacto">
-            <h2>contactanos</h2>
-            <a href="https://maps.app.goo.gl/Ru9KhVQhox3U9h6M6"><img src="" alt="Nuestra-Ubicacion"></a>
-            <form action="" method="post">
-                <label for="nombre">Nombre</label>
-                <input type="text" name="nombre">
-                <label for="Apellidos">Apellidos</label>
-                <input type="text" name="Apellidos">
-                <label for="Identificacion_tipo">Tipo Identificacion</label>
-                <select name="tipo" >
-                    <option value="none" selected disabled></option>
-                    <option value="cc">CC</option>
-                    <option value="ti">TI</option>
-                </select>
-                <label for="Identificacion_numero"># Identificacion</label>
-                <input type="number" name="Identificacion">
-                <input type="submit">
+        <section id="contactanos" class="contact-section">
+            <h2>Contactanos</h2>
+            <a href="https://maps.google.com" target="_blank" class="map-link">
+              Abrir en Google Maps
+            </a>
+          
+            <form class="contact-form">
+              <input type="text" placeholder="Tu nombre" required />
+              <input type="email" placeholder="Tu email" required />
+              <textarea placeholder="Tu mensaje" rows="4" required></textarea>
+              <button type="submit">Enviar</button>
             </form>
-        </section>
+          </section>          
 
-        <section class="servicios">
+        <section id="servicios" class="servicios">
             <h3>Nuestros servicios</h3>
-            <section class="servicios_">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-journal" viewBox="0 0 16 16">
-                    <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2"/>
-                    <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1z"/>
-                </svg>                
-                <p>un equipo de cinefilos y criticos que ofrece analisis profundos y honestos sobre las ultimas peliculas y clasicos  inolvidables.</p>
-            </section>
-            
-            <section class="servicios_">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-dots" viewBox="0 0 16 16">
-                    <path d="M5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0m4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
-                    <path d="m2.165 15.803.02-.004c1.83-.363 2.948-.842 3.468-1.105A9 9 0 0 0 8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6a10.4 10.4 0 0 1-.524 2.318l-.003.011a11 11 0 0 1-.244.637c-.079.186.074.394.273.362a22 22 0 0 0 .693-.125m.8-3.108a1 1 0 0 0-.287-.801C1.618 10.83 1 9.468 1 8c0-3.192 3.004-6 7-6s7 2.808 7 6-3.004 6-7 6a8 8 0 0 1-2.088-.272 1 1 0 0 0-.711.074c-.387.196-1.24.57-2.634.893a11 11 0 0 0 .398-2"/>
-                </svg>                
-                <p>diversidad de opiniones que ofrece multiples perspectivas para auyudar a los usuarios a tomar desiciones informadas sobre que ver.</p>
-            </section>
-
-            <section class="servicios_">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bug" viewBox="0 0 16 16">
-                    <path d="M4.355.522a.5.5 0 0 1 .623.333l.291.956A5 5 0 0 1 8 1c1.007 0 1.946.298 2.731.811l.29-.956a.5.5 0 1 1 .957.29l-.41 1.352A5 5 0 0 1 13 6h.5a.5.5 0 0 0 .5-.5V5a.5.5 0 0 1 1 0v.5A1.5 1.5 0 0 1 13.5 7H13v1h1.5a.5.5 0 0 1 0 1H13v1h.5a1.5 1.5 0 0 1 1.5 1.5v.5a.5.5 0 1 1-1 0v-.5a.5.5 0 0 0-.5-.5H13a5 5 0 0 1-10 0h-.5a.5.5 0 0 0-.5.5v.5a.5.5 0 1 1-1 0v-.5A1.5 1.5 0 0 1 2.5 10H3V9H1.5a.5.5 0 0 1 0-1H3V7h-.5A1.5 1.5 0 0 1 1 5.5V5a.5.5 0 0 1 1 0v.5a.5.5 0 0 0 .5.5H3c0-1.364.547-2.601 1.432-3.503l-.41-1.352a.5.5 0 0 1 .333-.623M4 7v4a4 4 0 0 0 3.5 3.97V7zm4.5 0v7.97A4 4 0 0 0 12 11V7zM12 6a4 4 0 0 0-1.334-2.982A3.98 3.98 0 0 0 8 2a3.98 3.98 0 0 0-2.667 1.018A4 4 0 0 0 4 6z"/>
-                </svg>                
-                <p>la clasificacion por generos permite a los usuarios filtrar reseñas segun preferencias, facilitando el descubrimiento de peliculas que les gusten.</p>
-            </section>
+            <div>
+                <section class="servicios_1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-journal" viewBox="0 0 16 16">
+                        <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2"/>
+                        <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1z"/>
+                    </svg>                
+                    <p>Un equipo de cinefilos y criticos que ofrece analisis profundos y honestos sobre las ultimas peliculas y clasicos inolvidables.</p>
+                </section>
+                
+                <section class="servicios_2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-dots" viewBox="0 0 16 16">
+                        <path d="M5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0m4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
+                        <path d="m2.165 15.803.02-.004c1.83-.363 2.948-.842 3.468-1.105A9 9 0 0 0 8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6a10.4 10.4 0 0 1-.524 2.318l-.003.011a11 11 0 0 1-.244.637c-.079.186.074.394.273.362a22 22 0 0 0 .693-.125m.8-3.108a1 1 0 0 0-.287-.801C1.618 10.83 1 9.468 1 8c0-3.192 3.004-6 7-6s7 2.808 7 6-3.004 6-7 6a8 8 0 0 1-2.088-.272 1 1 0 0 0-.711.074c-.387.196-1.24.57-2.634.893a11 11 0 0 0 .398-2"/>
+                    </svg>                
+                    <p>Diversidad de opiniones que ofrece multiples perspectivas para ayudar a los usuarios a tomar desiciones informadas sobre que ver.</p>
+                </section>
+    
+                <section class="servicios_3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-camera-reels" viewBox="0 0 16 16">
+                        <path d="M6 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0M1 3a2 2 0 1 0 4 0 2 2 0 0 0-4 0"/>
+                        <path d="M9 6h.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 7.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 16H2a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2zm6 8.73V7.27l-3.5 1.555v4.35zM1 8v6a1 1 0 0 0 1 1h7.5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1"/>
+                        <path d="M9 6a3 3 0 1 0 0-6 3 3 0 0 0 0 6M7 3a2 2 0 1 1 4 0 2 2 0 0 1-4 0"/>
+                    </svg>                
+                    <p>La clasificacion por generos permite a los usuarios filtrar reseñas segun preferencias, facilitando el descubrimiento de peliculas que les gusten.</p>
+                </section>
+            </div>
         </section>
         
     </main>
 
-    <footer>
-        <section>
-            <audio src="/sources/lofi songs for slow days.mp3" loop autoplay > </audio>
-            <img src="/sources/LogoAstroScreen.png" alt="Logo_AstroScreen_footer">
-            <p></p>
-        </section>
+    <footer id="quienes-somos">
+        <div class="logoo">
+            <audio src="/sources/lofi songs for slow days.mp3" loop autoplay></audio>
+            <div class="imagen">
+                <img class="imagenlogo" src="./sources/LogoAstroScreen.png" alt="Logo_AstroScreen_footer">
+            </div>
+            <div class="texto">
+                <p class="derechos_autor">© 2025 steven. Todos los derechos reservados</p>
+            </div>
+        </div>
         
-        <section class="contactos">
-            <ul type="none">
-                <li><a href="https://www.facebook.com/?locale=es_LA"><img src="/sources/LogoFacebook.png" alt="Logo_Facebook"></a> Facebook</li>
-                <li><a href="https://www.instagram.com/"><img src="/sources/LogoInstagram.png" alt="Logo_Instagram"></a> Instagram</li>
-                <li><a href="https://oferta.senasofiaplus.edu.co/sofia-oferta/"><img src="/sources/LogoSena.png" alt="Logo_Sena"></a> Sena</li>
-            </ul>
-            <section class="contactos_whatsapp">
-                <img src="/sources/LogoWhatsApp.png" alt="Logo_WhatsApp"> 
-                <p> copyritgth</p>
-            </section>
-            
+        <div class="contactos">
+            <div class="redes">
+                <a href="https://www.facebook.com/?locale=es_LA"><img class="red" src="./sources/LogoFacebook.png" alt="Logo_Facebook"></a>
+                <a href="https://www.instagram.com/"><img class="red" src="./sources/LogoInstagram.png" alt="Logo_Instagram"></a>
+                <a href="https://oferta.senasofiaplus.edu.co/sofia-oferta/"><img class="red" src="./sources/LogoSena.png" alt="Logo_Sena"></a>
+                <a href="https://web.whatsapp.com/"><img src="./sources/LogoWhatsApp.png" alt=""></a>
+            </div>
         </section>
         
     </footer>

@@ -1,0 +1,995 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(77, 77, 77);
+  z-index: 1;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+header *:not(.bg-video) {
+  position: relative;
+  z-index: 1;
+}
+
+.navegacion {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.navegacion img {
+  width: 240px;
+  height: 85px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  left: 20px;
+  position: relative;
+}
+
+.navegacion ul {
+  width: 550px;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 65px;
+  position: relative;
+  right: 180px;
+  font-size: 13.5px;
+}
+
+.navegacion ul li a {
+  color: white;
+  text-shadow: rgb(0, 0, 0) 5px 5px 5px;
+}
+
+.navegacion ul li a:hover {
+  border-bottom: 2px solid white;
+}
+
+.navegacion .inicio-sesion {
+  width: 120px;
+  height: 45px;
+  border: 2px solid white;
+  position: relative;
+  right: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+.navegacion .inicio-sesion:hover {
+  background-color: white;
+  cursor: pointer;
+
+  a {
+    color: rgb(26, 26, 26);
+  }
+}
+
+.navegacion .inicio-sesion a {
+  color: white;
+  font-size: 13.5px;
+}
+
+header .presentacion {
+  position: relative;
+  left: 15px;
+  top: 230px;
+  width: 60%;
+  color: white;
+  h1 {
+    font-weight: bold;
+    text-shadow: rgb(0, 0, 0) 12px 12px 12px;
+  }
+}
+
+main {
+  background-color: #060613;
+}
+
+.filtrar {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+
+  .resultados {
+    color: white;
+    position: absolute;
+    margin-right: 1295px;
+    font-weight: normal;
+    font-size: 18px;
+  }
+
+  div {
+    width: 105px;
+    height: 35px;
+    border: 2px solid rgb(206, 206, 206);
+    position: absolute;
+    margin-right: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+
+    span {
+      color: white;
+    }
+
+    svg {
+      color: white;
+    }
+  }
+}
+
+.filtrar div:hover {
+  background-color: rgba(255, 255, 255, 0.068);
+}
+
+.cajas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas de igual tamaño */
+  grid-template-rows: repeat(3, 1fr); /* 3 filas de igual tamaño */
+  gap: 40px; /* Espacio entre los elementos */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.caja_pelicula {
+  background-color: teal;
+  width: 340px;
+  height: 190px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+  border: 2px solid #060613;
+}
+
+.caja_pelicula:hover {
+  border: 2px solid white;
+  cursor: pointer;
+}
+
+.pelicula-1 {
+  background-image: url(/AstralScreen-0.2/sources/pelicula-1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+
+  div {
+    width: 340px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 50px;
+    p {
+      color: white;
+      z-index: 200;
+      position: relative;
+      left: 15px;
+    }
+  }
+
+  p {
+    width: 240px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    color: white;
+    font-weight: normal;
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  span {
+    width: 30px;
+    height: 28px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: normal;
+    font-size: 14px;
+    background-color: rgba(77, 77, 77, 0.832);
+  }
+}
+
+.pelicula-1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px; /* Altura del degradado */
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7));
+  pointer-events: none; /* Permite interactuar con el div */
+}
+
+/* .pelicula-1 :hover{
+    p{
+        color: white;
+        font-weight: normal;
+        font-size: 18px;
+    }
+
+    span{
+        color: white;
+        font-weight: normal;
+        font-size: 15px;
+    }
+} */
+
+.pelicula-2 {
+  background-image: url(/AstralScreen-0.2/sources/pelicula2.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+
+  div {
+    width: 340px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 50px;
+    p {
+      color: white;
+      z-index: 200;
+      position: relative;
+      left: 15px;
+    }
+  }
+
+  p {
+    width: 240px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    color: white;
+    font-weight: normal;
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  span {
+    width: 30px;
+    height: 28px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: normal;
+    font-size: 14px;
+    background-color: rgba(77, 77, 77, 0.832);
+  }
+}
+
+.pelicula-2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7));
+  pointer-events: none;
+}
+
+.pelicula-3 {
+  background-image: url(/AstralScreen-0.2/sources/pelicula-3.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+
+  div {
+    width: 340px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 50px;
+    p {
+      color: white;
+      z-index: 200;
+      position: relative;
+      left: 15px;
+    }
+  }
+
+  p {
+    width: 240px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    color: white;
+    font-weight: normal;
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  span {
+    width: 30px;
+    height: 28px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: normal;
+    font-size: 14px;
+    background-color: rgba(77, 77, 77, 0.832);
+  }
+}
+
+.pelicula-3::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px; /* Altura del degradado */
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7));
+  pointer-events: none; /* Permite interactuar con el div */
+}
+
+.pelicula-4 {
+  background-image: url(/AstralScreen-0.2/sources/pelicula-4.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+
+  div {
+    width: 340px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 50px;
+
+    p {
+      color: white;
+      z-index: 200;
+      position: relative;
+      left: 15px;
+    }
+  }
+
+  p {
+    width: 240px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    color: white;
+    font-weight: normal;
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  span {
+    width: 30px;
+    height: 28px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: normal;
+    font-size: 14px;
+    background-color: rgba(77, 77, 77, 0.832);
+  }
+}
+
+.pelicula-4::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px; /* Altura del degradado */
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7));
+  pointer-events: none; /* Permite interactuar con el div */
+}
+
+.pelicula-5 {
+  background-image: url(/AstralScreen-0.2/sources/pelicula-5.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+
+  div {
+    width: 340px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 50px;
+    p {
+      color: white;
+      z-index: 200;
+      position: relative;
+      left: 15px;
+    }
+  }
+
+  p {
+    width: 240px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    color: white;
+    font-weight: normal;
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  span {
+    width: 30px;
+    height: 28px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: normal;
+    font-size: 14px;
+    background-color: rgba(77, 77, 77, 0.832);
+  }
+}
+
+.pelicula-5::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px; /* Altura del degradado */
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7));
+  pointer-events: none; /* Permite interactuar con el div */
+}
+
+.pelicula-6 {
+  background-image: url(/AstralScreen-0.2/sources/pelicula-6.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+
+  div {
+    width: 340px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 50px;
+    p {
+      color: white;
+      z-index: 200;
+      position: relative;
+      left: 15px;
+    }
+  }
+
+  p {
+    width: 240px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    color: white;
+    font-weight: normal;
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  span {
+    width: 30px;
+    height: 28px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: normal;
+    font-size: 14px;
+    background-color: rgba(77, 77, 77, 0.832);
+  }
+}
+
+.pelicula-6::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px; /* Altura del degradado */
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7));
+  pointer-events: none; /* Permite interactuar con el div */
+}
+
+.pelicula-7 {
+  background-image: url(/AstralScreen-0.2/sources/pelicula-7.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+
+  div {
+    width: 340px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 50px;
+    p {
+      color: white;
+      z-index: 200;
+      position: relative;
+      left: 15px;
+    }
+  }
+
+  p {
+    width: 240px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    color: white;
+    font-weight: normal;
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  span {
+    width: 30px;
+    height: 28px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: normal;
+    font-size: 14px;
+    background-color: rgba(77, 77, 77, 0.544);
+  }
+}
+
+.pelicula-7::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px; /* Altura del degradado */
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7));
+  pointer-events: none; /* Permite interactuar con el div */
+}
+
+.pelicula-8 {
+  background-image: url(/AstralScreen-0.2/sources/pelicula-8.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+
+  div {
+    width: 340px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    p {
+      color: white;
+      z-index: 200;
+      position: relative;
+      left: 15px;
+    }
+  }
+
+  p {
+    width: 240px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    color: white;
+    font-weight: normal;
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  span {
+    width: 30px;
+    height: 28px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: normal;
+    font-size: 14px;
+    background-color: rgba(77, 77, 77, 0.832);
+  }
+}
+
+.pelicula-8::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px; /* Altura del degradado */
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7));
+  pointer-events: none; /* Permite interactuar con el div */
+}
+
+.pelicula-9 {
+  background-image: url(/AstralScreen-0.2/sources/pelicula-9.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+
+  div {
+    width: 340px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 50px;
+    p {
+      color: white;
+      z-index: 200;
+      position: relative;
+      left: 15px;
+    }
+  }
+
+  p {
+    width: 240px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    color: white;
+    font-weight: normal;
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  span {
+    width: 30px;
+    height: 28px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: normal;
+    font-size: 14px;
+    background-color: rgba(77, 77, 77, 0.832);
+  }
+}
+
+.pelicula-9::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px; /* Altura del degradado */
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7));
+  pointer-events: none; /* Permite interactuar con el div */
+}
+
+.caja-vermas {
+  width: 105px;
+  height: 35px;
+  border: 2px solid rgb(206, 206, 206);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  left: 710px;
+  bottom: 15px;
+  span {
+    color: white;
+  }
+}
+
+.caja-vermas:hover {
+    background-color: rgba(255, 255, 255, 0.068);
+}
+
+.contact-section {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-color: #060613;
+    color: white;
+
+    h2{
+        position: relative;
+        left: 1100px;
+        font-size: 22px;
+        top: 150px;
+    }
+}
+  
+.map-link {
+    width: 50%;
+    height: 70%;
+    position: relative;
+    top: 100px;
+    background-image: url(/AstralScreen-0.2/sources/mapa.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 0.5rem;
+}
+  
+.contact-form {
+    width: 50%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+  
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+    width: 80%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    outline: none;
+}
+  
+.contact-form input,
+.contact-form textarea {
+    background-color: #2a3550;
+    color: white;
+    outline: none;
+}
+  
+.contact-form button {
+    background-color: #1d2035;
+    color: #c8c8c8;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+  
+.contact-form button:hover {
+    background-color: #15192f;
+}
+  
+
+
+
+
+.servicios {
+  width: 100%;
+  height: 78vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 24px;
+
+  div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+  }
+
+  h3 {
+    color: white;
+    font-size: 26px;
+  }
+
+  .servicios_1 {
+    width: 400px;
+    height: 190px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+    svg {
+        color: #1d2035;
+        width: 60px;
+        height: 60px;
+    }
+  }
+
+  .servicios_2 {
+    width: 400px;
+    height: 190px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+    svg {
+        color: #1d2035;
+        width: 60px;
+        height: 60px;
+    }
+
+  }
+
+  .servicios_3 {
+    width: 400px;
+    height: 190px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+
+    svg {
+        color: #1d2035;
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        margin-bottom: 115px;
+    }
+    p{
+        position: relative;
+        top: 50px;
+    }
+  }
+
+  
+
+  p {
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    width: 350px;
+  }
+}
+
+footer {
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #141426;
+
+  .logoo {
+    width: 70%;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 20px;
+  }
+
+  .imagen {
+    width: 100%;
+    height: 18vh;
+    display: flex;
+    align-items: center;
+  }
+
+  .imagenlogo {
+    width: 300px;
+    height: 95px;
+  }
+
+  .texto {
+    width: 100%;
+    height: 12vh;
+  }
+
+  .derechos_autor {
+    width: 380px;
+    height: 20px;
+    text-align: center;
+    color: white;
+  }
+
+  .contactos {
+    width: 30%;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .redes {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    right: 100px;
+    top: 20%;
+    gap: 50px;
+
+    a img{
+        width: 50px;
+        height: 50px;
+        border-radius: 5px;
+    }
+  }
+}
